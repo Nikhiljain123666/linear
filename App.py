@@ -76,7 +76,7 @@ def download_model(model):
     st.markdown(href, unsafe_allow_html=True)
 #---------------------------------#
 st.write("""
-# The Machine Learning App Using *Random Forest Regressor()*
+# The Machine Learning App Using Random Forest Regressor
 
 Developed by: [Nikhil Jain , Hritwick Goyal , Prakhar Mehrishi]
 
