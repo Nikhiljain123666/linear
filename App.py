@@ -69,10 +69,10 @@ def build_model(df):
     download_model(rf)
 
 def download_model(model):
-    saved_model = pickle.dump(rf,open('rf.pkl', 'wb'))
+#     saved_model = pickle.dump(rf,open('rf.pkl', 'wb'))
     output_model = pickle.dumps(model)
 #     b64 = base64.b64encode(saved_model).decode()
-    href = f'<a href="data:file/output_model.pkl;base64,{saved_model}" download="model.pkl">Download Trained Model.pkl File</a>'
+    href = f'<a href="data:file/output_model.pkl;base64,{output_model}" download="model.pkl">Download Trained Model.pkl File</a>'
     st.markdown(href, unsafe_allow_html=True)
 #---------------------------------#
 st.write("""
