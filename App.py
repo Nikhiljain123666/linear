@@ -43,6 +43,8 @@ def build_model(df):
         n_jobs=parameter_n_jobs)
     rf.fit(X_train, Y_train)
 
+    download_model(rf)
+
     st.subheader('2. Model Performance')
 
     st.markdown('**2.1. Training set**')
@@ -64,6 +66,12 @@ def build_model(df):
     st.subheader('3. Model Parameters')
     st.write(rf.get_params())
 
+
+def download_model(model):
+    output_model = pickle.dumps(model)
+    b64 = base64.b64encode(output_model).decode()
+    href = f'<a href="data:file/output_model.pkl;base64,{b64}" download="model.pkl">Download Trained Model.pkl File</a>'
+    st.markdown(href, unsafe_allow_html=True)
 #---------------------------------#
 st.write("""
 # The Machine Learning App
