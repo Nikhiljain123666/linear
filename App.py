@@ -43,8 +43,8 @@ def build_model(df):
         oob_score=parameter_oob_score,
         n_jobs=parameter_n_jobs)
     rf.fit(X_train, Y_train)
-
-    download_model(rf)
+    
+    saved_model = pickle.dump(rf,open('rf.pkl', 'wb'))
 
     st.subheader('2. Model Performance')
 
@@ -66,7 +66,7 @@ def build_model(df):
 
     st.subheader('3. Model Parameters')
     st.write(rf.get_params())
-
+    download_model(rf)
 
 def download_model(model):
     output_model = pickle.dumps(model)
