@@ -76,11 +76,9 @@ def download_model(model):
     st.markdown(href, unsafe_allow_html=True)
 #---------------------------------#
 st.write("""
-# The Machine Learning App
+# The Machine Learning App Using *Random Forest Regressor()*
 
-In this implementation, the *RandomForestRegressor()* function is used in this app for build a regression model using the **Random Forest** algorithm.
-
-Try adjusting the hyperparameters!
+Developed by: [Nikhil Jain , Hritwick Goyal , Prakhar Mehrishi]
 
 """)
 
